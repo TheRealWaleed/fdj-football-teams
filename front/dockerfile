@@ -1,0 +1,19 @@
+FROM node:12-alpine
+
+RUN mkdir /usr/src/app
+
+WORKDIR /usr/src/app
+
+COPY package*.json /usr/src/app/
+
+RUN npm install -g @angular/cli@7.1.4
+
+RUN npm install
+
+
+COPY ./ /usr/src/front
+
+EXPOSE 4000
+
+RUN npm run build:ssr
+CMD [ "npm", "run", "serve:ssr" ]

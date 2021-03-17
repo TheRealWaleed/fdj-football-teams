@@ -1,0 +1,32 @@
+<div class="bg-white flex items-center m-2 p-2 rounded shadow border">
+  <div class="flex items-center space-x-4">
+    <img
+      class="w-16 h-16 rounded-md"
+      [src]="player.thumbnail"
+      [alt]="thumbnailAlt"
+    >
+  </div>
+  <div class="flex-grow p-3">
+    <div class="font-semibold text-gray-700">
+      {{ player.firstName }} {{ player.lastName }}
+    </div>
+    <div class="text-sm text-gray-500">
+      {{player.role}}
+    </div>
+    <div class="text-sm text-gray-500">
+      Birthday: {{ player.birthdate | date:'yyyy-mm-dd'}}
+    </div>
+    <div
+      class="text-sm text-gray-500"
+      *ngIf="player.contract === 'SPK'"
+    >
+      {{ player.price.amount | transferMarket: 2 }}
+    </div>
+    <div
+      class="text-sm text-gray-500"
+      *ngIf="player.contract !== 'SPK'"
+    >
+      {{ player.contract }}
+    </div>
+  </div>
+</div>

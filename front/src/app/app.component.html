@@ -1,0 +1,19 @@
+<div class="container pt-8 md:mx-auto">
+  <div class="flex justify-between items-end mobile-flex-col">
+    <div class="flex flex-wrap w-1/12 mx-2 justify-center logo">
+      <img
+        class="rounded max-w-full h-auto align-middle border-none cursor-pointer"
+        src="./assets/img/logo.png"
+        alt="FDJ logo"
+        (click)="navigateToHomePage()"
+      />
+    </div>
+
+    <app-search class="w-full"></app-search>
+
+  </div>
+
+  <section class="container pt-3 mx-lg m-auto">
+    <router-outlet></router-outlet>
+  </section>
+</div>

@@ -1,0 +1,26 @@
+<div class="max-w-md flex m-auto flex-col mt-4 mb-8">
+  <img
+    class="w-8 h-auto rounded-full m-auto"
+    [src]="team.logo"
+  />
+  <h4 class="text-center text-xl font-normal leading-normal mb-2 text-gray-800">
+    {{team.name}}
+  </h4>
+</div>
+
+<div class="grid gap-6 mb-8 md:grid-cols-2 p-1 xl:grid-cols-4">
+  <app-player-role-card
+    *ngFor="let stat of stats"
+    [color]=stat.color
+    [role]="stat.role"
+    [value]=stat.value
+  ></app-player-role-card>
+</div>
+
+<div class="flex flex-row flex-wrap justify-center">
+  <app-player
+    *ngFor="let player of team.players"
+    [player]="player"
+  >
+  </app-player>
+</div>
