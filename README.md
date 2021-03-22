@@ -61,8 +61,5 @@ npm run serve:ssr
 
 This project is [MIT](https://opensource.org/licenses/mit-license.php) licensed.
 
-## 🍻 Contributing
-You can find the contributor documentation here: [Contributor doc](https://github.com/anthem-cms/core/blob/develop/CONTRIBUTING.md)
-
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
